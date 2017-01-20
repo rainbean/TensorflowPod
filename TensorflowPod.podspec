@@ -56,7 +56,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source = { :http => "https://github.com/rainbean/TensorflowPod/releases/download/v#{s.name}/tensorflow.tar.gz" }
+  s.source = { :http => "https://github.com/rainbean/TensorflowPod/releases/download/v#{s.version}/tensorflow.tar.gz" }
   s.preserve_paths = "include/**"
 
   # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
