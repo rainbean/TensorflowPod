@@ -61,7 +61,7 @@
     pod install
     ```
 
-* Follow official demo app to develop, [link](https://github.com/tensorflow/tensorflow/tree/master/tensorflow/contrib/ios_examples)
+* Follow official demo app to develop, [link](https://github.com/tensorflow/tensorflow/tree/master/tensorflow/examples/ios)
     ```
     #include "google/protobuf/message_lite.h"
     #include "tensorflow/core/framework/tensor.h"
