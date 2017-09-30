@@ -1,6 +1,6 @@
 # TensorflowPod
 
-## Build Tensorflow on macOS
+## Build Tensorflow for iOS on macOS
 
 * [Prerequsite] Install xcode cli tools
     ```
@@ -69,4 +69,24 @@
 
     tensorflow::GraphDef graph;
     ...
+    ``` 
+
+## Apply hotfix
+
+* Issue [#1740](https://github.com/tensorflow/models/issues/1740): No OpKernel was registered to support Op 'Switch'
+    ```
+    $ sed  -i -- '98s/$/ m(bool)/' tensorflow/core/framework/register_types.h
+    $ git diff
+        ...
+        -#define TF_CALL_bool(m)
+        +#define TF_CALL_bool(m) m(bool)
+    ```
+
+* Issue [#9476](https://github.com/tensorflow/tensorflow/issues/9476): No OpKernel was registered to support Op 'Less'
+    ```
+    $ sed  -i -- '302,430s/__ANDROID_TYPES_SLIM__/__ANDROID_TYPES_FULL__/' tensorflow/contrib/makefile/Makefile
+    $ git diff
+        ...
+        - -D__ANDROID_TYPES_SLIM__ \
+        + -D__ANDROID_TYPES_FULL__ \
     ```
