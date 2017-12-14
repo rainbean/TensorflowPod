@@ -9,4 +9,5 @@ tar rvf $TAR -s '/^./include/' ./tensorflow/contrib/makefile/downloads/eigen/uns
 tar rvf $TAR -s '/^./include/' ./tensorflow/contrib/makefile/downloads/eigen/Eigen
 (cd tensorflow/contrib/makefile/gen; tar rvf ../../../../$TAR lib/libtensorflow-core.a)
 (cd tensorflow/contrib/makefile/gen/protobuf_ios; tar rvf ../../../../../$TAR lib/libprotobuf-lite.a lib/libprotobuf.a)
+(cd tensorflow/contrib/makefile/downloads/nsync/builds; tar rvf ../../../../../../$TAR -s /lipo.ios.c++11/lib/ lipo.ios.c++11/nsync.a)
 gzip $TAR
