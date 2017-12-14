@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "TensorflowPod"
-  s.version      = "1.4.0"
+  s.version      = "1.4.1"
   s.summary      = "Cocoapod based on Tensorflow (unofficial)"
   s.homepage     = "https://github.com/rainbean/TensorflowPod"
 
